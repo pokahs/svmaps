@@ -1,57 +1,53 @@
-body{
-    background-image: url(https://images.hdqwalls.com/download/simple-subtle-abstract-dark-minimalism-4k-u9-1360x768.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
+/*reminder to make search in button transparent*/
+
+/* Background setup for the entire page */
+body {
+  background-image: url(https://images.hdqwalls.com/download/simple-subtle-abstract-dark-minimalism-4k-u9-1360x768.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
 }
 
+/* Main container for the header and table */
 .parent {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;    /* Center items horizontally */
-    margin: 0;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
 }
 
+/* Header and subtitle styling */
 .header {
-    color: aliceblue;
-    font-size: 5vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: aliceblue;
+  font-size: 5vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .subtitle {
-    color: aliceblue;
-    font-size: 1vw;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 10px;
-    margin-bottom: 50px;
+  color: aliceblue;
+  font-size: 1vw;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
-table {
-  width: 80%;
-  border-collapse: collapse;
+/* Make shindinkle table transparent to show background img */
+table.dataTable tbody td {
+  background-color: transparent !important;
 }
 
-th, td {
-  border: none;
-  padding: 8px;
-  text-align: left;
-  color:beige;
+table.dataTable {
+  border-bottom: 2px solid white !important;
 }
 
-th {
-  cursor: pointer;
+table.dataTable thead th {
+  border-bottom: 2px solid white !important; /* Thicker white line for header */
 }
 
-img {
-  max-width: 100px;
-  height: auto;
-}
-
-
-/* The Modal (background) */
+/* Modal styling */
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
   z-index: 1;
   padding-top: 50px;
@@ -59,18 +55,23 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Modal Content (the image) */
 .modal-content {
   margin: auto;
   display: block;
   max-width: 90%;
   max-height: 90%;
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
 
-/* Caption of the image */
+@keyframes zoom {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
 #caption {
   margin: auto;
   display: block;
@@ -79,18 +80,6 @@ img {
   padding: 10px 0;
 }
 
-/* Add Animation */
-.modal-content {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-}
-
-/* The Close Button */
 .close {
   position: absolute;
   top: 20px;
