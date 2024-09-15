@@ -1,3 +1,5 @@
+note this fork got merged into main project, so this pretty much uneeded. might del idk
+
 # hi this is raining
 im makin a website to display a comprehensive list of the maparts on the simply vanilla minecraft server. im no expert so its very likely i have included some vulnerablities in this that make it able to be messed with, but like pls dont <3
 
